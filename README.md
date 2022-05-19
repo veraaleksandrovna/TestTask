@@ -10,3 +10,6 @@
 1. Test framework was written based on PageObject pattern
 2. OOP principles are present
 3. Assertions was written with FluentAssertions
+
+**Result of tests**
+![alt text](TestProject/img_1.png)
