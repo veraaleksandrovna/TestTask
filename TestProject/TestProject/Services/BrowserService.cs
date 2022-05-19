@@ -10,7 +10,6 @@ public class BrowserService
         Driver = Configurator.BrowserType.ToLower() switch
         {
             "chrome" => new DriverFactory().GetChromeDriver(),
-            "firefox" => new DriverFactory().GetFirefoxDriver(),
             _ => Driver
         };
 
