@@ -1,4 +1,7 @@
-﻿using NUnit.Framework;
+﻿using System.Collections.Generic;
+using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using TestProject.Pages;
 
 namespace TestProject.Tests;
@@ -7,10 +10,18 @@ namespace TestProject.Tests;
 public class DropDownListTest: BaseTest
 {
     [Test]
-    public void DisplyTest()
+    public void CountDropDownOptionsTest()
     {
-        var page = new DropDownPage(Driver, true);
+        var dropDownPage = new DropDownPage(Driver, true);
         
-        Assert.IsTrue(page.Logo.Displayed);
+        Assert.IsTrue(dropDownPage.Logo.Displayed);
+
+        SelectElement selectList = new SelectElement(Driver.FindElement(By.TagName("select")));
+        IList<IWebElement> elementCount = selectList.Options;
+        
+        var expectedValue = 249;
+        var countOptions = elementCount.Count;
+        Assert.AreEqual(expectedValue, countOptions);
     }
+    
 }
