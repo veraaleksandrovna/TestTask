@@ -1,5 +1,6 @@
-**TEST TASK: **
-The autotest must do the following:
+**TEST TASK **
+**The autotest must do the following:**
+
 1.Open your browser and expand it to full screen (BrowserService.cs)
 2.Go to following url (DropDownPage.cs 17 line)
 3.Find country drop-down element (DropDownListTest.cs 21 line)
