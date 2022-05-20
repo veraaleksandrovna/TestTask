@@ -7,7 +7,7 @@ namespace TestProject.Tests;
 public class BaseTest
 {
     protected IWebDriver? Driver;
-    
+
     [OneTimeSetUp]
     protected void OneTimeSetup()
     {

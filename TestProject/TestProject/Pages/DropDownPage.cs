@@ -1,19 +1,18 @@
-﻿using System.Collections.Generic;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
+﻿using OpenQA.Selenium;
 using TestProject.Services;
 
 namespace TestProject.Pages;
 
-public class DropDownPage: BasePage
+public class DropDownPage : BasePage
 {
     private static readonly By LogoBy = By.Id("logo");
 
     public DropDownPage(IWebDriver? driver, bool openPageByUrl) : base(driver, openPageByUrl)
     {
     }
+
     public IWebElement Logo => WaitService.WaitElementExist(LogoBy);
-    
+
     protected override void OpenPage()
     {
         Driver.Navigate().GoToUrl(Configurator.BaseUrl);
