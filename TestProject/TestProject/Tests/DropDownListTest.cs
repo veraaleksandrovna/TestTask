@@ -16,7 +16,7 @@ public class DropDownListTest : BaseTest
     {
         var dropDownPage = new DropDownPage(Driver, true);
 
-        dropDownPage.Logo.Displayed.Should().BeTrue();
+        dropDownPage.IsPageOpened();
 
         var selectList = new SelectElement(Driver.FindElement(By.TagName("select")));
         IList<IWebElement> elementCount = selectList.Options;
